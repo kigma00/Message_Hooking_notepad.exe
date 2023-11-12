@@ -37,7 +37,7 @@ LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
                 return 1;
         }
     }
-    // 다른 프로세스에서 발생한 키 입력에 대해서는 아무 조치도 취하지 않습니다.
+    // 다른 프로세스에서 발생한 키 입력에 대해서는 아무 조치도 취하지 않음.
     return CallNextHookEx(g_hHook, nCode, wParam, lParam);
 }
 
