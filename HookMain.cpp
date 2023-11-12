@@ -15,7 +15,7 @@ int main(void) {
     PFN_HOOKSTOP HookStop = NULL;
     char ch = 0;
 
-    // KeyHook.dll Load
+    // KeyHook.dll 로딩
     hDll = LoadLibrary(DEF_DLL_NAME);
 
     if (hDll == NULL) {
@@ -33,7 +33,7 @@ int main(void) {
         return 1;
     }
 
-    // Hooking Start
+    // Hooking Start 함수 호출
     HookStart();
 
     printf("Press 'q' to quit.\n");
@@ -41,9 +41,9 @@ int main(void) {
     // Wait until User input 'q'
     while (_getch() != 'q');
 
-    // Hooking Stop
+    // Hooking Stop 함수 호출
     HookStop();
 
-    // KeyHook.dll Unloading
+    // KeyHook.dll 언로딩
     FreeLibrary(hDll);
 }
